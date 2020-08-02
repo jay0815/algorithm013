@@ -1,3 +1,14 @@
+## 算法学习
+
+* 刻意练习很重要
+    * 及时反馈是学习动力的源泉
+    * 站在巨人的肩膀上学习，会事半功倍
+* 练习思路
+    * 先写所有想到的方案
+    * 根据时间复杂度选择方案
+    * 自顶向下编程
+    * 每题必须五毒神掌
+
 ## Stack、Quene、Deque
 
 |Operation|Stack|Quene|Deque|
@@ -71,6 +82,35 @@ class Queue {
   dequeue() {
     return this.collection.shift();
   }
+  peek() {
+    return this.collection[0];
+  }
+  get size() {
+    return this.collection.length;
+  }
+  get isEmpty() {
+    return this.collection.length === 0;
+  }
+}
+
+class Dequeue {
+  constructor() {
+    this.collection = []
+  }
+  addLast(item) {
+    this.collection.push(item)
+  }
+  addFirst(item) {
+    this.collection.unshift(item);
+  }
+  removeFirst() {
+    return this.collection.shift();
+  }
+
+  removeLast() {
+    return this.collection.pop();
+  }
+
   peek() {
     return this.collection[0];
   }
