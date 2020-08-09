@@ -9,7 +9,7 @@ export default {
     }
     const result = [];
     nums.sort((a, b) => a - b);
-    const set = new Set();
+    const set = new Set<string>();
     for (let i = 0; i < nums.length - 2; i++) {
       for (let j = 1 + i; j < nums.length - 1; j++) {
         for (let k = j + 1; k < nums.length; k++) {

@@ -9,7 +9,7 @@ export default {
       '{': '}'
     };
     const stack: string[] = [];
-    let value;
+    let value: string | undefined;
     for (let i = 0; i < s.length; i++) {
       if (value = bracketMap[s[i]]) {
         stack.unshift(value);
