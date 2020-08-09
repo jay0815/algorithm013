@@ -9,6 +9,8 @@
 * N 叉树的前序遍历（亚马逊在半年内面试中考过）
   * [twoSum](./homework/nAryTreePreorder.ts)
 * HeapSort ：自学 https://www.geeksforgeeks.org/heap-sort/
+  * [MaxTwoBinaryHeap](./TwoBinaryHeap/MaxHeap.ts)
+  * [MinTwoBinaryHeap](./TwoBinaryHeap/MinHeap.ts)
 #### 中等：
 * 字母异位词分组（亚马逊在半年内面试中常考）
   * [groupAnagrams](./homework/groupAnagrams.ts)
@@ -20,4 +22,6 @@
   * [indorder](./homework/preorder.ts)
 * N 叉树的层序遍历（亚马逊在半年内面试中考过）
 * 丑数（字节跳动在半年内面试中考过）
+  * [isUgly](./homework/isUgly.ts)
 * 前 K 个高频元素（亚马逊在半年内面试中常考）
+  * [topKFrequent](./homework/topKFrequent.ts)
