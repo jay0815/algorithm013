@@ -1,7 +1,9 @@
 export class TreeNode {
+
   val: number;
   left: TreeNode | null;
   right: TreeNode | null;
+
   constructor(val: number) {
     this.val = val;
     this.left = null;
@@ -9,13 +11,15 @@ export class TreeNode {
   }
 }
 export class BinaryTree {
+
   root: TreeNode | null;
   orderPath: number[];
+
   constructor() {
     this.root = null;
     this.orderPath = [];
   }
-
+  // helper function
   insert(v: number) {
     const node = new TreeNode(v);
     if(this.root === null) {
@@ -38,6 +42,72 @@ export class BinaryTree {
       } else {
         this.insertNode(root.right, node);
       }
+    }
+  }
+
+  // find the min number node in tree
+  // searching starts from given node
+  // min number always on left side
+  findMinNode(root: TreeNode) {
+    // if left of a node is null
+    // then it must be min number node
+    if(root.left === null) {
+      return root
+    }
+    return this.findMinNode(root.left);
+  }
+
+  // removeNode with a given data
+  remove(value: number) {
+    this.root = this.removeNode(this.root, value);
+  }
+
+  // Method to remove node with a
+  // given data
+  // it recur over the tree to find the
+  // data and removes it
+  // 1.find target
+  // 2.then remove node
+  // 3.then link node
+  removeNode(root: TreeNode, value: number) {
+    // if the root is null then tree is
+    // empty
+    if(root === null) {
+      return null;
+    } else if(value < root.val) {
+      // if data to be delete is less than
+      // roots data then move to left subtree
+      root.left = this.removeNode(root.left, value);
+      return root;
+    } else if(value > root.val) {
+      // if data to be delete is greater than
+      // roots data then move to right subtree
+      root.right = this.removeNode(root.right, value);
+      return root;
+    } else {
+      // root.val === value
+      // replace root node with root.left or root.left
+      if(root.left === null && root.right === null) {
+        root = null;
+        return root;
+      }
+      // deleting node with one children
+      if(root.left === null){
+        root = root.right;
+        return root;
+      } else if(root.right === null) {
+        root = root.left;
+        return root;
+      }
+
+      // Deleting node with two children
+      // minumum node of the rigt subtree
+      // is stored in aux
+      var aux = this.findMinNode(root.right);
+      root.val = aux.val;
+
+      root.right = this.removeNode(root.right, aux.val);
+      return root;
     }
   }
 

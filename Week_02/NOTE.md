@@ -9,10 +9,16 @@
 * 右子树上的所有值均大于其根节点的值
 * 每个子树也均为二叉搜索树
 
+代码实现: [BST in javascript](./BinaryTree/BinarySearchTree.ts)
+
 
 ### HeapSort
 
 堆分为大顶堆、小顶堆
+
+代码实现: [MaxHeap in javascript](./BinaryTree/MaxHeap.ts)
+代码实现: [MinHeap in javascript](./BinaryTree/MinHeap.ts)
+
 
 #### 二叉堆
   * 通过完全二叉树实现
