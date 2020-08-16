@@ -3,6 +3,7 @@
 ### 计数排序法
 
 #### 算法实现思路
+
 > 借助索引的顺序 变相 排序
 
 * 根据min、max之间的距离建立索引
@@ -44,7 +45,9 @@ function countingSort(list, min, max) {
 }
 
 ```
-__countingSort__
+
+__CountingSort__
+
 |项目|值|
 |---|---|
 |最差时间复杂度|O(n+k)|
@@ -63,9 +66,26 @@ __countingSort__
 * 清理当层 (revert the current level status)
   * 视情况决定是否需要对部分变量做处理
 
-
 ##### 分治
-template
+
+注意点：
+
+* 原问题与分解成的子问题具有相同的模式
+* 原问题分解成的子问题可以独立求解
+* 子问题之间没有相关性
+* 有分解终止条件
+* 子问题结果可以合并
+
+1. 分治算法分三步：
+
+(1) 分解：将原问题分解成一系列子问题；
+
+(2) 解决：递归地求解各个子问题，若子问题足够小，则直接求解；
+
+(3) 合并：将子问题的结果合并成原问题。
+
+template:
+
 ```Javascript
 const divide_conquer = (problem, params) => {
 
@@ -77,7 +97,7 @@ const divide_conquer = (problem, params) => {
 
     return
 
-  } 
+  }
 
   // process current problem
 
@@ -101,3 +121,5 @@ const divide_conquer = (problem, params) => {
 ```
 
 ##### 回溯
+
+> 回溯搜索是深度优先搜索（DFS）的一种

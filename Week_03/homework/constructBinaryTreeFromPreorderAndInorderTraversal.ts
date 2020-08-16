@@ -32,11 +32,14 @@ export default {
       const spliteIndex = map.get(preorder[rootIndex]);
       // leftchilds 的个数 = 中序遍历中当前节点的位置 - 当前 节点中序遍历 的 起始位置 -> 当前节点 所有左子树的范围
       const leftTreeCount = spliteIndex - inOrderLeft;
-
+      // 根据当前值穿件 树节点
       const root = new TreeNode(preorder[rootIndex]);
-
+      // 当前节点 的左树节点位置为 preOrderLeft+1
+      // 左子树的 当前在 preOrder 中的 index 范围为 preOrderLeft + 1, preOrderLeft + leftTreeCount
+      // 左子树在 当前在 inOrder 中的index范围为 [inOrderLeft, spliteIndex - 1]
+      // 且符合 preOrderLeft + 1, preOrderLeft + leftTreeCount === inOrderLeft + spliteIndex - 1
       root.left = build(preOrderLeft + 1, preOrderLeft + leftTreeCount, inOrderLeft, spliteIndex - 1);
-
+      // 右子树 逻辑同上
       root.right = build(preOrderLeft + leftTreeCount + 1, preOrderRight, spliteIndex + 1, inOrderRight);
 
       return root;
