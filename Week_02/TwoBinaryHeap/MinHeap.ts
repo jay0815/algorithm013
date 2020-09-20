@@ -1,6 +1,6 @@
 import { BaseBinaryHeap } from './BaseBinaryHeap';
 
-class MinBinaryHeap extends BaseBinaryHeap {
+export class MinBinaryHeap extends BaseBinaryHeap {
 
     constructor() {
         super();
