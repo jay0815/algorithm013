@@ -10,6 +10,7 @@
   * [reverseBits](./homework/reverseBits.ts)
 * 用自己熟悉的编程语言，手写各种初级排序代码，提交到学习总结中。
 * 数组的相对排序（谷歌在半年内面试中考过）
+  * [relativeSortArray](./homework/relativeSortArray.ts)
 * 有效的字母异位词（Facebook、亚马逊、谷歌在半年内面试中考过）
 
 ## 中等
