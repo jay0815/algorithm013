@@ -3,10 +3,14 @@
 ## 简单
 
 * 字符串中的第一个唯一字符（亚马逊、微软、Facebook 在半年内面试中考过）
+  * [firstUniqChar](./homework/firstUniqChar.ts)
 * 反转字符串 II （亚马逊在半年内面试中考过）
+  * [reverseStr](./homework/reverseStr.ts)
 * 翻转字符串里的单词（微软、字节跳动、苹果在半年内面试中考过）
+  * [reverseWords](./homework/reverseWords.ts)
 * 反转字符串中的单词 III （微软、字节跳动、华为在半年内面试中考过）
 * 仅仅反转字母（字节跳动在半年内面试中考过）
+  * [reverseOnlyLetters](./homework/reverseOnlyLetters.ts)
 * 同构字符串（谷歌、亚马逊、微软在半年内面试中考过）
 * 验证回文字符串 Ⅱ（Facebook 在半年内面试中常考）
 
